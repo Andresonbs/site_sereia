@@ -931,8 +931,16 @@
     gaTracking('create', 'UA-198269409-1', 'auto');
 
     gaTracking('send', 'pageview');
+  
+  //Rolou até o final
+  
+  $(window).scroll(function() {
+    if($(window).scrollTop() + $(window).height() >= $(document).height()) {
+      gaTracking('send', 'event', 'scroll' 'https://andresonbs.github.io/site_sereia/');
+  }
+});
     
-  </script>
+    </script>
 
 </head>
 
