@@ -933,6 +933,17 @@
     gaTracking('send', 'pageview');
   
   //Rolou até o final
+    
+    document.addEventListener('scroll', function(){
+ 
+    var h =  document.documentElement,
+        b =  document.body,
+        st =  'scrollTop',
+        sh =  'scrollHeight';
+ 
+    var percent = parseInt ( (h[st]||b[st]) / ((h[sh]||b[sh]) - h.clientHeight) * 100);
+ 
+   console.log(percent + "%");
   
  if (percent == 25){
         ga('send', 'event', 'Scrolling', '25%', 'https://andresonbs.github.io/site_sereia/', { 'nonInteraction': 1 });
@@ -947,7 +958,7 @@
    	ga('send', 'event', 'Scrolling', '100%', 'https://andresonbs.github.io/site_sereia/', { 'nonInteraction': 1 });
    }
    
-  }, true);
+  });
     
     </script>
 
