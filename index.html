@@ -934,12 +934,13 @@
   
   //Rolou até o final
   
-  $(window).scroll(function() {
-    if($(window).scrollTop() + $(window).height() >= $(document).height()) {
-      gaTracking('send', 'event', 'scroll');
-      $(window).unbid("scrollDown");
-  }
-});
+$(window).scroll(function() {
+       if ($(window).scrollTop() + $(window).height() == $(document).height()) {
+           ga('send','event','scroll', 'https://andresonbs.github.io/site_sereia/');
+            console.log("Final");
+            $(window).unbind("scrollDown");
+       }
+   });
     
     </script>
 
