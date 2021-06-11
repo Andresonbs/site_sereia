@@ -934,15 +934,15 @@
   
   //Rolou até o final
     
-var scrollDown = function() {
+var func = function() {
  if (window.pageXOffset + window.pageYOffset == document.body.scrollHeight) {
 	 
- 	ga('send','event','scrollDownPage', 'https://andresonbs.github.io/site_sereia/');
- 	console.log("Fim da página");
-    	window.removeEventListener("scroll", scrollDown);
+ 	ga('send','event','roloupage', 'https://andresonbs.github.io/site_sereia/');
+ 	console.log("Final");
+    	window.removeEventListener("scroll", func);
   }
 }
-window.addEventListener("scroll", scrollDown);
+window.addEventListener("scroll", func);
     
     </script>
 
