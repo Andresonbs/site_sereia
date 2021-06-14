@@ -1007,6 +1007,18 @@
   document.addEventListener('scroll', scrollFunction50);
   document.addEventListener('scroll', scrollFunction75);
   document.addEventListener('scroll', scrollFunction100);
+	  
+// 1 minuto na página
+	  
+window.addEventListener('load', () => setTimeout(function () {
+	  ga('send', 'event', 'PageView', '>= 1 min', 'https://andresonbs.github.io/site_sereia/', { 'nonInteraction': 1 });
+  }, 60000));
+	  
+// Envio de formulário
+	  
+ document.addEventListener('submit', function () {
+  	ga('send', 'event', 'Contact Form', 'Submitted', 'https://andresonbs.github.io/site_sereia/');
+  });
     
     </script>
 
