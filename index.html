@@ -932,16 +932,81 @@
 
     ga('send', 'pageview');
     
-//Rolou até o final
- var func = function() {
- if (window.pageXOffset + window.pageYOffset == document.body.scrollHeight) {
-	 
- 	ga('send','event','rollPageUp');
- 	console.log("Final");
-    	window.removeEventListener("scroll", func);
+//Scroll Down
+ var scrollFunction25 = function(){
+ 
+    	var h =  document.documentElement,
+        b =  document.body,
+        st =  'scrollTop',
+        sh =  'scrollHeight';
+ 
+    	var percent = parseInt ( (h[st]||b[st]) / ((h[sh]||b[sh]) - h.clientHeight) * 100);
+ 
+   	console.log(percent + "%");
+	    
+   	// tag de scroll 25
+	    
+   	if (percent == 25){
+        	ga('send', 'event', 'Scrolling', '25%', 'https://andresonbs.github.io/site_sereia/', { 'nonInteraction': 1 });
+		document.removeEventListener('scroll', scrollFunction25);
+   	}  
   }
-}
-window.addEventListener("scroll", func);
+	  
+  var scrollFunction50 = function(){
+	var h =  document.documentElement,
+        b =  document.body,
+        st =  'scrollTop',
+        sh =  'scrollHeight';
+ 
+    	var percent = parseInt ( (h[st]||b[st]) / ((h[sh]||b[sh]) - h.clientHeight) * 100);
+ 
+   	console.log(percent + "%");
+	    
+  	// tag de scroll50
+  	if (percent == 50){
+    		ga('send', 'event', 'Scrolling', '50%', 'https://andresonbs.github.io/site_sereia/', { 'nonInteraction': 1 });
+		document.removeEventListener('scroll', scrollFunction50);
+   	}
+  } 
+  
+  var scrollFunction75 = function(){
+	var h =  document.documentElement,
+        b =  document.body,
+        st =  'scrollTop',
+        sh =  'scrollHeight';
+ 
+    	var percent = parseInt ( (h[st]||b[st]) / ((h[sh]||b[sh]) - h.clientHeight) * 100);
+ 
+   	console.log(percent + "%");
+	    
+  	// tag de scroll75
+  	if (percent == 75){
+    		ga('send', 'event', 'Scrolling', '75%', 'https://andresonbs.github.io/site_sereia/', { 'nonInteraction': 1 });
+		document.removeEventListener('scroll', scrollFunction75);
+   	}
+  } 
+ 
+  var scrollFunction100 = function(){
+	var h =  document.documentElement,
+        b =  document.body,
+        st =  'scrollTop',
+        sh =  'scrollHeight';
+ 
+    	var percent = parseInt ( (h[st]||b[st]) / ((h[sh]||b[sh]) - h.clientHeight) * 100);
+ 
+   	console.log(percent + "%");
+	    
+  	// tag de scroll100
+  	if (percent == 100){
+    		ga('send', 'event', 'Scrolling', '100%', 'https://andresonbs.github.io/site_sereia/', { 'nonInteraction': 1 });
+		document.removeEventListener('scroll', scrollFunction100);
+   	}
+  } 
+  
+  document.addEventListener('scroll', scrollFunction25);
+  document.addEventListener('scroll', scrollFunction50);
+  document.addEventListener('scroll', scrollFunction75);
+  document.addEventListener('scroll', scrollFunction100);
     
     </script>
 
