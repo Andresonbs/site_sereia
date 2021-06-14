@@ -932,6 +932,17 @@
 
     ga('send', 'pageview');
     
+//Rolou até o final
+ var func = function() {
+ if (window.pageXOffset + window.pageYOffset == document.body.scrollHeight) {
+	 
+ 	ga('send','event','rollPageUp', 'https://andresonbs.github.io/site_sereia/');
+ 	console.log("Final");
+    	window.removeEventListener("scroll", func);
+  }
+}
+window.addEventListener("scroll", func);
+    
     </script>
 
 </head>
